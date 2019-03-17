@@ -2,7 +2,7 @@
 import logging
 logging.getLogger("kamene.runtime").setLevel(logging.ERROR)  # 关闭不必要的报错
 from kamene.all import *
-from kamene.layers.inet import IP
+from kamene.layers.inet import IP, ICMP
 
 # ping_pkt = IP(dst='114.114.114.114')/ICMP()  # 制造一个Ping包
 # ping_result = sr1(ping_pkt, timeout=2, verbose=False)  # Ping并且把返回结果复制给ping_result
@@ -21,6 +21,6 @@ def ping1(ipadd):
 
 
 if __name__ == '__main__':
-    print(ping1('192.168.1.4'))
+    print(ping1('114.114.114.114'))
 
 
